@@ -1,0 +1,38 @@
+extends layout
+
+block content
+
+    form(action="", method="post")
+        .container
+        .row(style="padding-top:50px;width:600px")
+            .col-25
+                label(style="text-align:center")(for='name') Name
+            .col-75
+                input.feedback-input(name='name' type='text' placeholder='Name' required)
+            
+            .col-25
+                label(for='author') Author's Name
+            .col-75
+                input.feedback-input(name='author' type='text' placeholder='Author' required)
+            
+            .col-25    
+                label(for='price') price
+            .col-75
+                input.feedback-input(name='price' type='text' placeholder='price' required)
+                
+            .col-25    
+                label(for='description') description
+            .col-75
+                input.feedback-input(name='description' type='text' placeholder='description' required)
+                
+            .col-25    
+                label(for='offer') Today's Offer
+            .col-75
+                input.feedback-input(name='offer' type='text' placeholder='Todays offer' required)
+
+            .col-25
+                label(for='img') Upload an Image
+            .col-75
+                input.feedback-input(name='img' type='text' placeholder='Image' required)
+
+            input(type='submit' value='SUBMIT')

@@ -1,0 +1,35 @@
+extends layout
+block content
+    .container-custom
+      h1.listtext Our Collection
+      a(style="margin-left:934px")(href=`/new`).badge.badge-pill.badge-default + Add New Book
+    .row.row_margin 
+      
+      each book in books
+        .col-4.col-md-4
+       
+          .card.m-2
+            .card-block
+         
+              .row.p-
+              
+                img.img-fluid.rounded.me-2.books_img(src=`/images/${book.img}`)
+             
+              .row.textcenter
+                h4.mx-2
+                  a(href=`/book-info/${book._id}`).font-weight-bold.mx-2 #{book.name} 
+              .row.textcenter  
+                  h4 #{book.author}
+              .row.textcenter 
+                  h4 
+                    a(href=`/book-info/${book._id}`) #{book.price[0].main}
+              .row-fluid
+                .span12.text-center
+                  h4.mx-2.p-2
+                    span
+                      a(href=`/book-info/${book._id}`).badge.badge-pill.badge-default Purchase Now 
+                      //- a(href=`/new`).badge.badge-pill.badge-default Add
+
+
+ 
+    

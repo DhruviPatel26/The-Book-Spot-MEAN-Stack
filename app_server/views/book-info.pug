@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  .about-section
+    h1(style="font-size:50px") #{currentbook.name} 
+      .row
+        .col-4
+          .col-4.col-md-4 
+            .card.card-primary 
+              .card-block(style="height: 400px;margin-left:-150px;width: 580px;margin-top:20px")
+                h2.card-title.font-weight-bold Description 
+                h5(style="color:#114a7b").stylebold Publisher's Name: #{currentbook.author}
+                h5(style="color:#114a7b").stylebold Price: #{currentbook.price[0].main}
+                p.style #{currentbook.description}
+                button.btn Buy Now
+                .card-block(style="height: 180px;border-radius:300px;color:#fff;margin-top: -520px;margin-bottom:60px;margin-left: 1098px;background-color: #05555c;width: 200px")
+                  h2(style="font-size:25px;padding-top:38px;color:#c2fd41").card-title.font-weight-bold Today's Offer:
+                  h2(style="font-size:28px;color:#c2fd41") #{currentbook.price[0].offer} OFF
+                  //- h4(style="margin-bottom:10px") Original Rate: $25
+                  //- h5 Discounted Rate: $19.55
+
+        img(style="margin-top:49px;width:380px").img-fluid.rounded.widthabout(src=`/images/${currentbook.img}`)

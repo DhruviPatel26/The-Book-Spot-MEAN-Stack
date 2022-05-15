@@ -1,0 +1,56 @@
+doctype html
+html
+  head
+    title= title
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  
+body
+  nav.navbar.fixed-top.navbar-toggleable-md.navbar-inverse
+    .container
+      button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarMain')
+        span.navbar-toggler-icon
+      a(href="/")
+        img.img-fluid.rounded.me-2(src='/images/77.png',style="width:80px;height:auto")
+
+      #navbarMain.navbar-collapse.collapse.ml-3
+        ul.navbar-nav
+          li.nav-item()
+            h5
+              a.nav-font.nav-link(href='/list',style="color:#efeaea") Collections
+        ul.navbar-nav
+          li.nav-item
+            h5
+              a.nav-font.nav-link(href='/about',style="color:#efeaea") About
+        ul.navbar-nav
+          li.nav-item
+            h5
+              a.nav-font.nav-link(href='/display',style="color:#efeaea") Newly Published
+
+  .section.header-section.main-section
+    .container-custom
+      h1 The Book Spot
+      p.bannertext Read what you want, when you want…! <br>Where your imagination comes alive<br>Where the stories never run out
+
+  .container
+    footer.footerclass(style="background-color:#1b6167")
+      .container
+        .row
+          .col-12
+            h5.footertext &copy; The Book Spot
+    
+  section
+    .container-custom
+      h1.center We Are Known For
+        
+  section
+    .container-custom
+      .grid-system-main
+        .inner-grid-main
+          span(style="font-size:30px") Let us inspire your first chapter
+        .inner-grid-main
+          span(style="font-size:30px") Best collection of books from all genres
+        .inner-grid-main
+          span(style="font-size:30px") The place to get lost in a world of books
